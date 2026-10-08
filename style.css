@@ -33,7 +33,7 @@ body {
     z-index: 1;
 }
 
-/* Tarjeta Principal Extra Ancha */
+/* Tarjeta Principal Ancha */
 .card {
     position: relative;
     z-index: 10;
@@ -46,7 +46,7 @@ body {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.5);
     max-width: 95%;
-    width: 520px; /* <--- Aumentado a 520px para dar máximo espacio */
+    width: 520px;
 }
 
 .heart-icon {
@@ -69,7 +69,6 @@ p {
     margin-bottom: 25px;
 }
 
-/* Contenedor flexible con espacio de sobra */
 .buttons-container {
     display: flex;
     justify-content: center;
@@ -79,9 +78,8 @@ p {
     width: 100%;
 }
 
-/* Espaciador del botón NO con margen holgado */
 .button-spacer {
-    min-width: 190px; /* <--- Ampliado a 190px */
+    min-width: 190px;
     height: 50px;
     flex-shrink: 0;
 }
@@ -115,7 +113,6 @@ button {
     transition: transform 0.2s ease;
 }
 
-/* Botón de la foto escondida */
 #btn-secret-photo {
     background-color: #6f42c1;
     color: white;
