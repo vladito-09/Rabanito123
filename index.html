@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tengo una pregunta...</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <div class="overlay"></div>
+
+    <!-- Tarjeta Principal -->
+    <div class="card" id="main-card">
+        <div class="heart-icon">💖</div>
+        <h1>¿vamos hacer novios?</h1>
+        
+        <div class="buttons-container">
+            <button id="btn-yes">¡SÍ, mi gordito! 🥰</button>
+            <div class="button-spacer"></div>
+        </div>
+    </div>
+
+    <!-- Botón NO fuera de la tarjeta -->
+    <button id="btn-no">Ni en tus sueños🙈</button>
+
+    <!-- MODAL POPUP PARA LA PRIMERA VEZ ("¿Cómo que no pulgosa?") -->
+    <div class="modal-overlay hidden" id="custom-modal">
+        <div class="modal-card">
+            <div class="modal-icon">🤨</div>
+            <h2>¿Cómo que ni en mis sueños pulgosa,AVIVA?</h2>
+            <button id="btn-modal-close">Aceptar 🙄</button>
+        </div>
+    </div>
+
+    <!-- Tarjeta de éxito cuando presiona SÍ -->
+    <div class="card hidden" id="success-card">
+        <div class="heart-icon">🎉❤️</div>
+        <h1>¡Sabía que me ibas a decir que si mi amorcito!</h1>
+        <p>Eres lo mejor que me a pasado, TE AMO ✨</p>
+        
+        <!-- Botón para ver la Foto Escondida -->
+        <button id="btn-secret-photo">Foto sorpresa</button>
+    </div>
+
+    <!-- MODAL DE LA FOTO PROHIBIDA -->
+    <div class="modal-overlay hidden" id="photo-modal">
+        <div class="modal-card photo-card">
+            <h2>Nuestra familia❤️</h2>
+            <div class="img-container">
+                <img src="images/fotoprohi.jpg" alt="Foto Prohibida" id="secret-img">
+            </div>
+            <button id="btn-photo-close">Salir ❌</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

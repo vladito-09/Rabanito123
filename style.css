@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    
+    background-image: url('images/FondoRaba.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+/* Tarjeta Principal Extra Ancha */
+.card {
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.65); 
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 35px 25px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    max-width: 95%;
+    width: 520px; /* <--- Aumentado a 520px para dar máximo espacio */
+}
+
+.heart-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+    animation: pulse 1.2s infinite;
+}
+
+h1 {
+    color: #d63384;
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    word-wrap: break-word;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Contenedor flexible con espacio de sobra */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    min-height: 60px;
+    width: 100%;
+}
+
+/* Espaciador del botón NO con margen holgado */
+.button-spacer {
+    min-width: 190px; /* <--- Ampliado a 190px */
+    height: 50px;
+    flex-shrink: 0;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    white-space: nowrap;
+}
+
+#btn-yes {
+    background-color: #28a745;
+    color: white;
+    flex-shrink: 0;
+}
+
+#btn-no {
+    background-color: #dc3545;
+    color: white;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    transition: transform 0.2s ease;
+}
+
+/* Botón de la foto escondida */
+#btn-secret-photo {
+    background-color: #6f42c1;
+    color: white;
+    font-size: 16px;
+    padding: 10px 24px;
+    margin-top: 10px;
+}
+
+/* MODALES POPUP */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+
+.modal-card {
+    background: #ffffff;
+    padding: 25px 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    width: 340px;
+    animation: popIn 0.25s ease-out;
+}
+
+.modal-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.modal-card h2 {
+    color: #d63384;
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+#btn-modal-close {
+    background-color: #d63384;
+    color: white;
+    padding: 8px 22px;
+    font-size: 15px;
+}
+
+.photo-card {
+    width: 350px;
+    padding: 20px;
+}
+
+.img-container {
+    width: 100%;
+    max-height: 350px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#btn-photo-close {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 25px;
+    font-size: 15px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.7); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
