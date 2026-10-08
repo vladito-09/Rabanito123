@@ -72,8 +72,10 @@ btnYes.addEventListener('click', () => {
     }
 });
 
-// Abrir modal de la foto escondida
+// Abrir modal de la foto escondida con recarga de caché para celular
 btnSecretPhoto.addEventListener('click', () => {
+    const img = document.getElementById('secret-img');
+    img.src = "images/Nuestrafamilia.jpg?v=" + new Date().getTime();
     photoModal.classList.remove('hidden');
 });
 
